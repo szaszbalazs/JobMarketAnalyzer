@@ -24,3 +24,6 @@ class Job(models.Model):
     tasks = models.ManyToManyField(Tasks)
     qualifications = models.ManyToManyField(Qualifications)
     requirements = models.ManyToManyField(Requirements)
+
+    def __str__(self):
+        return self.job_description
